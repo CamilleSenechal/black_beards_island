@@ -1,0 +1,1230 @@
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&family=Poppins:wght@300;400;600&display=swap");
+html body input.button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+html body {
+  background-color: white;
+}
+html body h2 {
+  font-family: "Della Respira", serif;
+  color: #313131;
+  font-size: 30px;
+  margin-bottom: 16px;
+  letter-spacing: 0.16em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+html body h3 {
+  font-family: "Poppins", sans-serif;
+  color: #313131;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 2em;
+}
+html body p {
+  color: #313131;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+}
+html body a {
+  text-decoration: none;
+}
+html body a.btn-ctnr {
+  display: flex;
+  align-items: flex-end;
+}
+html body a.button {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding: 14px 15px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #313131;
+  letter-spacing: 0.08em;
+  transition-duration: 400ms;
+  border-radius: 9px 0 9px 0;
+}
+html body a.button:hover {
+  background-color: #2aae81;
+  border-radius: 0 9px 0 9px;
+}
+html body a .btn {
+  height: 50px;
+  transition-duration: 400ms;
+}
+html body a:hover .btn {
+  transform: scale(1.05);
+  filter: drop-shadow(2px 1px 15px rgba(0, 0, 0, 0.3));
+}
+html body input.button {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding: 14px 15px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #313131;
+  letter-spacing: 0.08em;
+  transition-duration: 400ms;
+}
+html body input.button:hover {
+  background-color: #2aae81;
+}
+html body .user-box {
+  position: relative;
+  margin-top: 26px;
+  width: 100%;
+}
+html body .user-box#u-name, html body .user-box#u-cp, html body .user-box#u-city, html body .user-box#u-exp, html body .user-box#u-ccv {
+  margin-right: 26px;
+}
+html body .user-box input {
+  width: 100%;
+  padding: 14px 14px 12px 14px;
+  font-size: 16px;
+  color: #313131;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  outline: none;
+  background: transparent;
+  margin: 0.8px;
+  box-sizing: border-box;
+}
+html body .user-box input:focus {
+  border: 2px solid #2aae81;
+  margin: 0;
+}
+html body .user-box input.input-card-name {
+  text-transform: uppercase;
+}
+html body .user-box label {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  padding: 17px 0 11px 0;
+  font-size: 14px;
+  color: #808080;
+  pointer-events: none;
+  transition: 100ms;
+}
+html body .user-box input:focus ~ label,
+html body .user-box input:valid ~ label {
+  top: -10px;
+  padding: 1px 5px;
+  left: 9px;
+  color: #2aae81;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+html body section {
+  width: 100%;
+  position: relative;
+}
+html body section .sectionbg {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+html body section .sectionbg.sbg-left {
+  left: 0;
+}
+html body section .sectionbg.sbg-right {
+  right: 0;
+}
+html body section .divided {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+}
+html body section .divided .d-left,
+html body section .divided .d-right {
+  box-sizing: border-box;
+  width: 50%;
+}
+html body section .divided .texte {
+  box-sizing: border-box;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+html body section .divided .texte.tgauche {
+  padding-right: 50px;
+}
+html body section .divided .texte.tdroite {
+  padding-left: 50px;
+}
+html body section .divided .texte .separateur {
+  width: 80px;
+  height: 2px;
+  background-color: #2aae81;
+  margin-bottom: 25px;
+}
+html body .ctnr {
+  width: 1200px;
+  height: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+  position: relative;
+  z-index: 100;
+}
+html body .anim-img {
+  position: absolute;
+  animation-fill-mode: forwards;
+}
+html body header {
+  height: 135px;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+html body header #headerbar {
+  height: 85px;
+  background-color: #262025;
+  box-shadow: 2px 1px 32px -4px rgba(0, 0, 0, 0.87);
+  position: relative;
+}
+html body header #headerbar:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(270deg, #c93643, #fcc447);
+  background-size: 400% 400%;
+  animation: AnimationName 30s ease infinite;
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+html body header #headerbar #headerbar-ctnr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body header #headerbar #headerbar-ctnr #logo-link {
+  margin-top: 5px;
+  align-self: flex-start;
+  position: relative;
+  z-index: 1000;
+}
+html body header #headerbar #headerbar-ctnr #logo-link:hover #sitelogo {
+  transform: scale(1.06);
+}
+html body header #headerbar #headerbar-ctnr #logo-link #sitelogo {
+  height: 130px;
+  filter: drop-shadow(2px 1px 15px rgba(0, 0, 0, 0.8));
+  transition-duration: 900ms;
+}
+html body header #headerbar #headerbar-ctnr nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body header #headerbar #headerbar-ctnr nav ul li {
+  display: inline-block;
+}
+html body header #headerbar #headerbar-ctnr nav ul li:not(#left-last), html body header #headerbar #headerbar-ctnr nav ul li:not(#right-first) {
+  padding-left: 40px;
+}
+html body header #headerbar #headerbar-ctnr nav ul li#left-last {
+  padding-right: 20px;
+}
+html body header #headerbar #headerbar-ctnr nav ul li#right-first {
+  padding-left: 20px;
+}
+html body header #headerbar #headerbar-ctnr nav ul li #acheter {
+  background-color: #2aae81;
+  color: #313131;
+  font-size: 15px;
+  padding: 11px 13px;
+}
+html body header #headerbar #headerbar-ctnr nav ul li #acheter:hover {
+  background-color: #c93643;
+  color: #fff;
+}
+html body header #headerbar #headerbar-ctnr nav ul li a:not(#acheter):not(#cart) {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Della Respira", serif;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 400ms;
+  padding: 4px 0;
+}
+html body header #headerbar #headerbar-ctnr nav ul li a:not(#acheter):not(#cart)::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #F7CA18;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+html body header #headerbar #headerbar-ctnr nav ul li a:not(#acheter):not(#cart):hover, html body header #headerbar #headerbar-ctnr nav ul li a:not(#acheter):not(#cart).selected {
+  color: #F7CA18;
+  text-shadow: 0 0 19px rgba(247, 202, 24, 0.69), 0 0 8px rgba(247, 202, 24, 0.62), 0 0 8px rgba(247, 202, 24, 0.62);
+}
+html body header #headerbar #headerbar-ctnr nav ul li a:not(#acheter):not(#cart):hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+html body header #headerbar #headerbar-ctnr nav ul li .lang {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  cursor: default;
+}
+html body header #headerbar #headerbar-ctnr nav ul li .lang#lang-change:hover {
+  color: #F7CA18;
+  cursor: pointer;
+}
+html body header #headerbar #headerbar-ctnr nav ul li .lang#lang-change:after {
+  opacity: 0;
+}
+html body #histoire,
+html body #comment-jouer,
+html body #newsletter {
+  min-height: calc(100vh - 86px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+html body #histoire .ctnr,
+html body #comment-jouer .ctnr,
+html body #newsletter .ctnr {
+  box-sizing: border-box;
+  min-height: calc(100vh - 86px);
+}
+html body hr {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  border: none;
+}
+html body #section1 {
+  height: calc(100vh - 85px);
+  background-image: url("../img/ciel.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  overflow: hidden;
+}
+html body #section1 #maitre-equipage {
+  height: 110%;
+  top: -10px;
+  left: -50px;
+  z-index: 14;
+  -webkit-transform-origin: 0 25%;
+  transform-origin: 0 25%;
+  -webkit-animation-name: maitre;
+  animation-name: maitre;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+@keyframes maitre {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 3deg);
+    transform: rotate3d(0, 0, 1, 3deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, -3deg);
+    transform: rotate3d(0, 0, 1, -3deg);
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+html body #section1 .ctnr {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+html body #section1 .ctnr iframe {
+  margin-top: 50px;
+}
+html body #section1 .ctnr h2 {
+  color: white;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+html body #section1 .ctnr .two-buttons {
+  bottom: 150px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 250px;
+  box-sizing: border-box;
+}
+html body #histoire {
+  background-image: url("../img/ile.jpg");
+  background-size: cover;
+  background-position: center;
+}
+html body #histoire #perroquet {
+  height: 550px;
+  right: -50px;
+  bottom: -75px;
+  z-index: 14;
+  opacity: 0;
+}
+html body #histoire #perroquet.anim-perroquet {
+  animation-name: perroquet;
+  animation-timing-function: cubic-bezier(0, 1.11, 0.27, 1);
+}
+@keyframes perroquet {
+  0% {
+    transform: translateX(100%) translateY(25%) rotate(50deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+}
+html body #histoire #longuevue {
+  height: 25%;
+  top: 20%;
+  right: 30%;
+  z-index: 13;
+  transform: translateX(250%) translateY(150%) rotate(340deg);
+  opacity: 0;
+}
+html body #histoire #longuevue.anim-longuevue {
+  animation-name: longuevue;
+  animation-timing-function: cubic-bezier(0, 1.1, 0, 0.99);
+}
+@keyframes longuevue {
+  0% {
+    transform: translateX(250%) translateY(150%) rotate(340deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+}
+html body #histoire #rhum {
+  height: 35%;
+  top: 17%;
+  right: 24%;
+  z-index: 10;
+  opacity: 0;
+}
+html body #histoire #rhum.anim-rhum {
+  animation-name: rhum;
+  animation-timing-function: cubic-bezier(0, 1.1, 0, 0.99);
+}
+@keyframes rhum {
+  0% {
+    transform: translateX(250%) translateY(150%) rotate(860deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(-24deg);
+    opacity: 1;
+  }
+}
+html body #histoire .tgauche {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-left: 50px;
+  border-radius: 40px 0 40px 0;
+}
+html body #histoire .tgauche h2, html body #histoire .tgauche p {
+  color: white;
+}
+html body #comment-jouer #cuisinier {
+  height: 70%;
+  z-index: 13;
+  bottom: 15%;
+  left: 15%;
+  opacity: 0;
+}
+html body #comment-jouer #carte-pistolet {
+  height: 70%;
+  z-index: 14;
+  bottom: 8%;
+  left: 20%;
+  opacity: 0;
+}
+html body #comment-jouer #jeton {
+  height: 30%;
+  z-index: 15;
+  bottom: 25%;
+  left: 10%;
+  opacity: 0;
+}
+html body section#newsletter {
+  background-image: url("../img/bateau.jpg");
+  background-size: cover;
+  background-position: center;
+}
+html body section#newsletter #charpentier {
+  height: 120%;
+  right: 5%;
+  bottom: -25%;
+  z-index: 11;
+  opacity: 0;
+}
+html body section#newsletter #charpentier.anim-charpentier {
+  animation-name: charpentier;
+  animation-timing-function: cubic-bezier(0, 1.1, 0, 0.99);
+}
+@keyframes charpentier {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+html body section#newsletter .ctnr .d-right {
+  width: 40%;
+}
+html body section#newsletter .ctnr .d-left {
+  width: 60%;
+  background-color: #edf2f4;
+  padding-left: 50px;
+  border-radius: 40px 0 40px 0;
+  box-shadow: 2px 1px 32px -4px rgba(0, 0, 0, 0.87);
+}
+html body section#newsletter .ctnr .d-left #newsletter-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+html body section#newsletter .ctnr .d-left #newsletter-form .user-box {
+  position: relative;
+  margin-top: 26px;
+  width: 100%;
+}
+html body section#newsletter .ctnr .d-left #newsletter-form .user-box input {
+  width: 90%;
+  padding: 14px 14px 12px 14px;
+  font-size: 16px;
+  color: #313131;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  outline: none;
+  background: transparent;
+  margin: 0.8px;
+  box-sizing: border-box;
+}
+html body section#newsletter .ctnr .d-left #newsletter-form .user-box input:focus {
+  border: 2px solid #2aae81;
+  margin: 0;
+}
+html body section#newsletter .ctnr .d-left #newsletter-form .user-box input.input-card-name {
+  text-transform: uppercase;
+}
+html body section#newsletter .ctnr .d-left #newsletter-form .user-box label {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  padding: 17px 0 11px 0;
+  font-size: 14px;
+  color: #808080;
+  pointer-events: none;
+  transition: 100ms;
+}
+html body section#newsletter .ctnr .d-left #newsletter-form .user-box input:focus ~ label,
+html body section#newsletter .ctnr .d-left #newsletter-form .user-box input:valid ~ label {
+  top: -10px;
+  padding: 1px 5px;
+  left: 9px;
+  color: #2aae81;
+  background-color: #edf2f4;
+  font-size: 12px;
+  font-weight: 500;
+}
+html body section#newsletter .ctnr .d-left #newsletter-form .thar-one {
+  width: 140px;
+  margin-right: 0;
+  margin-left: 25px;
+}
+html body #three-d .ctnr {
+  position: relative;
+}
+html body #three-d .ctnr #masque3d {
+  position: absolute;
+  height: 85px;
+  width: 250px;
+  border-radius: 8px;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-55%);
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+}
+html body #three-d .ctnr #masque3d img {
+  height: 55px;
+}
+html body #three-d .ctnr #masque3d span {
+  color: #313131;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+html body #plateau {
+  min-height: 660px;
+  max-height: 690px;
+  height: calc(100vh - 85px);
+  box-sizing: border-box;
+  background-image: url("../img/plateau-bg.png");
+  background-position: center;
+}
+html body #plateau #plateau-ctnr {
+  min-height: 660px;
+  height: calc(100vh - 85px);
+  max-height: 690px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  position: relative;
+}
+html body #plateau #plateau-ctnr #plateau-txt {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  z-index: 9;
+}
+html body #plateau #plateau-ctnr #plateau-txt h2 {
+  color: #fff;
+  text-align: right;
+  text-shadow: 0 0 8px #281315;
+}
+html body #plateau #plateau-ctnr #plateau-txt div {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 26px;
+}
+html body #plateau #plateau-ctnr #plateau-txt div .button {
+  height: 24px;
+  margin-left: 26px;
+  background-color: #2aae81;
+  color: #313131;
+}
+html body #plateau #plateau-ctnr #plateau-txt div .button:hover {
+  background-color: #c93643;
+  color: #fff;
+}
+html body #plateau #plateau-ctnr #plateau-txt div p {
+  color: #fff;
+  text-align: right;
+  text-shadow: 0 0 8px #281315;
+}
+html body #plateau #plateau-ctnr .plateau-partie {
+  width: 100%;
+}
+html body #plateau #plateau-ctnr .plateau-partie .plateau-carte-objet {
+  height: 145px;
+}
+html body #plateau #plateau-ctnr .plateau-partie .plateau-jeton {
+  height: 70px;
+}
+html body #plateau #plateau-ctnr #plateau-haut {
+  max-height: 190px;
+  height: calc(((100vh - 85px) / 3) - 40px);
+  display: flex;
+  justify-content: space-between;
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-pioche {
+  position: relative;
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-pioche .plateau-carte-objet {
+  position: absolute;
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-pioche .plateau-carte-objet:nth-child(1) {
+  z-index: 5;
+  top: 40px;
+  left: 40px;
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-pioche .plateau-carte-objet:nth-child(2) {
+  z-index: 4;
+  top: 44px;
+  left: 44px;
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-pioche .plateau-carte-objet:nth-child(3) {
+  z-index: 3;
+  top: 48px;
+  left: 48px;
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-pioche .plateau-carte-objet:nth-child(4) {
+  z-index: 2;
+  top: 52px;
+  left: 52px;
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-pioche .plateau-carte-objet:nth-child(5) {
+  z-index: 1;
+  top: 57px;
+  left: 57px;
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-main-adv {
+  position: relative;
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-main-adv .plateau-carte-objet {
+  position: absolute;
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-main-adv .plateau-carte-objet:nth-child(1) {
+  z-index: 1;
+  top: 25px;
+  right: 280px;
+  transform: rotate(230deg);
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-main-adv .plateau-carte-objet:nth-child(2) {
+  z-index: 2;
+  top: 40px;
+  right: 250px;
+  transform: rotate(205deg);
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-main-adv .plateau-carte-objet:nth-child(3) {
+  z-index: 3;
+  top: 50px;
+  right: 210px;
+  transform: rotate(180deg);
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-main-adv .plateau-carte-objet:nth-child(4) {
+  z-index: 4;
+  top: 40px;
+  right: 160px;
+  transform: rotate(155deg);
+}
+html body #plateau #plateau-ctnr #plateau-haut #plateau-main-adv .plateau-carte-objet:nth-child(5) {
+  z-index: 5;
+  top: 30px;
+  right: 120px;
+  transform: rotate(130deg);
+}
+html body #plateau #plateau-ctnr #plateau-milieu {
+  max-height: 310px;
+  height: calc(((100vh - 85px) / 3) + 80px);
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body #plateau #plateau-ctnr #plateau-milieu .plateau-carte-personnage {
+  z-index: 1;
+  height: 180px;
+}
+html body #plateau #plateau-ctnr #plateau-milieu .perso-ctnr {
+  position: relative;
+}
+html body #plateau #plateau-ctnr #plateau-milieu .perso-ctnr .plateau-jeton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+html body #plateau #plateau-ctnr #plateau-milieu .perso-ctnr .plateau-jeton#jeton-1 {
+  transform: translateX(-67%) translateY(-46%) rotate(24deg);
+}
+html body #plateau #plateau-ctnr #plateau-milieu .perso-ctnr .plateau-jeton#jeton-2 {
+  transform: translateX(-35%) translateY(-52%) rotate(-7deg);
+}
+html body #plateau #plateau-ctnr #plateau-milieu .perso-ctnr .plateau-jeton#jeton-3 {
+  transform: translateX(-47%) translateY(-21%) rotate(59deg);
+}
+html body #plateau #plateau-ctnr #plateau-milieu .perso-ctnr .plateau-jeton#jeton-4 {
+  transform: translateX(-80%) translateY(-59%) rotate(22deg);
+}
+html body #plateau #plateau-ctnr #plateau-milieu .perso-ctnr .plateau-jeton#jeton-5 {
+  transform: translateX(-50%) translateY(-68%) rotate(-44deg);
+}
+html body #plateau #plateau-ctnr #plateau-milieu .perso-ctnr .plateau-jeton#jeton-6 {
+  transform: translateX(-22%) translateY(-37%) rotate(2deg);
+}
+html body #plateau #plateau-ctnr #plateau-milieu .perso-ctnr .plateau-jeton#jeton-7 {
+  transform: translateX(-77%) translateY(-40%) rotate(84deg);
+}
+html body #plateau #plateau-ctnr #plateau-milieu .plateau-carte-objet {
+  z-index: 2;
+  position: absolute;
+  height: 145px;
+}
+html body #plateau #plateau-ctnr #plateau-milieu .plateau-carte-objet#carte-rhum, html body #plateau #plateau-ctnr #plateau-milieu .plateau-carte-objet#carte-boussole {
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(80%);
+}
+html body #plateau #plateau-ctnr #plateau-milieu .plateau-carte-objet#carte-maillet {
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(-80%) rotate(180deg);
+}
+html body #plateau #plateau-ctnr #plateau-bas {
+  height: calc(((100vh - 85px) / 3) - 40px);
+  max-height: 190px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+html body #plateau #plateau-ctnr #plateau-bas #plateau-main {
+  min-height: calc(((100vh - 85px) / 3) - 40px);
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+html body #plateau #plateau-ctnr #plateau-bas #plateau-main .plateau-carte-objet {
+  margin-bottom: 20px;
+  margin-right: 15px;
+  filter: drop-shadow(0 0 4px #31221F);
+  transition-duration: 1000ms;
+}
+html body #plateau #plateau-ctnr #plateau-bas #plateau-main .plateau-carte-objet:hover {
+  height: 160px;
+}
+html body #achat {
+  background-color: #313131;
+  min-height: calc(100vh - 86px);
+}
+html body #achat .ctnr {
+  min-height: calc(100vh - 86px);
+  box-sizing: border-box;
+  padding: 90px 70px;
+  background-color: white;
+  overflow: hidden;
+}
+html body #achat .ctnr .d-left {
+  width: 60%;
+}
+html body #achat .ctnr .d-right {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body #achat .ctnr .d-right img {
+  height: 400px;
+}
+html body #achat .ctnr h2 {
+  margin-bottom: 50px;
+}
+html body #achat .ctnr table {
+  width: 98%;
+}
+html body #achat .ctnr table th {
+  text-align: left;
+}
+html body #achat .ctnr table tr {
+  height: 38px;
+}
+html body #achat .ctnr table tr td:not(.tdbtn) {
+  padding-right: 28px;
+}
+html body #achat .ctnr table tr td.quantite {
+  font-weight: 600;
+}
+html body #achat .ctnr table tr td.tdbtn {
+  padding-left: 20px;
+  text-align: right;
+}
+html body #achat .ctnr table tr td button {
+  font-size: 26px;
+  font-weight: 600;
+  height: 30px;
+  width: 30px;
+  line-height: 26px;
+  cursor: pointer;
+}
+html body #achat .ctnr #tablefooter {
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+html body #paiement #recap-ctnr {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 26px;
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+html body #paiement #recap-ctnr #recap-left {
+  width: 50%;
+}
+html body #paiement #recap-ctnr #recap-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+html body #paiement #recap-ctnr #recap-right img {
+  width: 50%;
+}
+html body #paiement #recap-ctnr #recap-table {
+  width: 100%;
+  margin-bottom: 26px;
+}
+html body #paiement #recap-ctnr #recap-table tr {
+  height: 40px;
+}
+html body #paiement #recap-ctnr #recap-table tr td {
+  color: #313131;
+  font-size: 16px;
+  font-weight: 300;
+  white-space: nowrap;
+}
+html body #paiement #recap-ctnr #recap-table tr td#total, html body #paiement #recap-ctnr #recap-table tr td#total-value {
+  font-weight: 600;
+}
+html body #paiement #recap-ctnr #recap-table tr td:nth-child(2) {
+  width: 35px;
+}
+html body #paiement #recap-ctnr #recap-table tr td:nth-child(3) {
+  text-align: right;
+  width: 90px;
+}
+html body #paiement #recap-ctnr a {
+  color: #313131;
+  text-decoration: underline;
+}
+html body #paiement form .ctnr {
+  align-items: flex-start;
+}
+html body #paiement form .d-left {
+  padding-right: 50px;
+  padding-top: 0;
+  border-right: 1px solid #ddd;
+}
+html body #paiement form .d-right {
+  padding-left: 50px;
+}
+html body #paiement form .d-right h4 {
+  margin-right: 45px;
+}
+html body #paiement form .d-right #chose-method {
+  width: 100%;
+  height: 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 26px;
+}
+html body #paiement form .d-right #chose-method input {
+  margin-right: 8px;
+}
+html body #paiement form .d-right #chose-method label {
+  margin-right: 10px;
+}
+html body #paiement form .d-right #chose-method #logo-cb {
+  height: 25px;
+  margin-right: 40px;
+  padding-bottom: 2px;
+}
+html body #paiement form .d-right #chose-method #logo-paypal {
+  padding-top: 5px;
+  width: 80px;
+}
+html body #paiement form .d-right #card-accept {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 51.6px;
+}
+html body #paiement form .d-right #card-accept #accept-txt {
+  margin-right: 25px;
+}
+html body #paiement form .d-right #card-accept .card-method {
+  margin-right: 20px;
+}
+html body #paiement form .d-right #card-accept .card-method.not {
+  opacity: 0.2;
+}
+html body #paiement form .d-right #card-accept #mastercard {
+  height: 55px;
+}
+html body #paiement form .d-right #card-accept #visa {
+  height: 70px;
+}
+html body #paiement form .d-right #card-accept #amex {
+  height: 25px;
+}
+html body #paiement form .d-right #card-accept #jcb {
+  height: 40px;
+}
+html body #paiement form .form-line {
+  display: flex;
+  justify-content: space-between;
+}
+html body #paiement form .form-line#pay-address #u-cp {
+  width: 70%;
+}
+html body #paiement form .form-line#card-detail #u-ccv {
+  width: 33%;
+}
+html body #paiement form .user-box {
+  position: relative;
+  margin-top: 26px;
+  width: 100%;
+}
+html body #paiement form .user-box#u-name, html body #paiement form .user-box#u-cp, html body #paiement form .user-box#u-city, html body #paiement form .user-box#u-exp, html body #paiement form .user-box#u-ccv {
+  margin-right: 26px;
+}
+html body #paiement form .user-box input {
+  width: 100%;
+  padding: 14px 14px 12px 14px;
+  font-size: 16px;
+  color: #313131;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  outline: none;
+  background: transparent;
+  margin: 0.8px;
+  box-sizing: border-box;
+}
+html body #paiement form .user-box input:focus {
+  border: 2px solid #2aae81;
+  margin: 0;
+}
+html body #paiement form .user-box input.input-card-name {
+  text-transform: uppercase;
+}
+html body #paiement form .user-box label {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  padding: 17px 0 11px 0;
+  font-size: 14px;
+  color: #808080;
+  pointer-events: none;
+  transition: 100ms;
+}
+html body #paiement form .user-box input:focus ~ label,
+html body #paiement form .user-box input:valid ~ label {
+  top: -10px;
+  padding: 1px 5px;
+  left: 9px;
+  color: #2aae81;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+html body #paiement form #pay-btn {
+  margin-top: 26px;
+}
+html body #confirm-wrapper {
+  min-height: 100vh;
+}
+html body #confirmation {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  justify-content: space-between;
+}
+html body #confirmation .confirmation-side {
+  width: 50%;
+  min-height: calc(100vh - 60px);
+}
+html body #confirmation #confirmation-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+html body .plug {
+  height: 85px;
+  width: 100%;
+}
+
+#panier-icon {
+  height: 35px;
+  padding-top: 7px;
+}
+
+.arrow-down {
+  height: 10px;
+}
+
+#content-end {
+  padding-bottom: 180px;
+}
+
+footer {
+  width: 100%;
+  background-color: #262025;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+footer #footer-ctnr {
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer #footer-ctnr span {
+  color: white;
+  font-size: 14px;
+  margin-right: 50px;
+  padding: 10px 0;
+}
+footer #footer-ctnr a {
+  color: white;
+  text-decoration: underline;
+}
+footer #footer-ctnr #footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+footer #footer-ctnr #footer-right #logo-chifoumi-blanc {
+  height: 100px;
+}
+
+#swup {
+  min-height: 100vh;
+  position: relative;
+}
+
+/*Animations*/
+.anim-cuisinier {
+  animation-name: cuisinier;
+  animation-timing-function: cubic-bezier(0, 1.11, 0.27, 1);
+}
+
+@keyframes cuisinier {
+  from {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-120deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(20deg);
+  }
+}
+.anim-carte-pistolet {
+  animation-name: carte-pistolet;
+  animation-timing-function: cubic-bezier(0, 1.11, 0.27, 1);
+}
+
+@keyframes carte-pistolet {
+  from {
+    opacity: 0;
+    transform: translateX(-100%) rotate(-120deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(55deg);
+  }
+}
+.anim-jeton {
+  animation-name: jeton;
+  animation-timing-function: cubic-bezier(0, 1.11, 0.27, 1);
+}
+
+@keyframes jeton {
+  from {
+    opacity: 0;
+    transform: translateX(-100%) translateY(-25%) rotate(-190deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotate(-35deg);
+  }
+}
+.transition-fade-fromRight {
+  transition: 300ms;
+  transition-delay: 200ms;
+  opacity: 1;
+  transform: translateX(0);
+  transform-origin: left;
+}
+
+html.is-animating .transition-fade-fromRight {
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade-fromRight {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.transition-swipeDown {
+  transition: 500ms;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+html.is-leaving .transition-swipeDown {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

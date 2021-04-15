@@ -1,42 +1,75 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Connexion{% endblock %}
 
 {% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+<style>
+    .separateur {
+        width: 80px;
+        height: 2px;
+        background-color: #2aae81;
+        margin-bottom: 25px;
+    }
+    #section_accueil .ctnr {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 80px;
+    }
 
-    {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
-        </div>
-    {% endif %}
+    .button {
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        padding: 14px 15px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #313131;
+        letter-spacing: 0.08em;
+        transition-duration: 400ms;
+        margin-top: 20px;
+    }
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" required>
+</style>
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
+<section id="section_accueil">
+    <div class="ctnr">
+        <form method="post">
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
 
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
+            {% if app.user %}
+                <div class="mb-3">
+                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            {% endif %}
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-    #}
 
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
+            <h1>Connexion</h1>
+            <div class="separateur"></div>
+
+            <div class="user-box">
+
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autocomplete="off" >
+                <label for="inputEmail">Email</label>
+            </div>
+
+            <div class="user-box">
+
+                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="off" required>
+                <label for="inputPassword" >Mot de passe</label>
+            </div>
+
+
+            <input type="hidden" name="_csrf_token"
+                   value="{{ csrf_token('authenticate') }}"
+            >
+
+            <button type="submit" class="button">
+                Connexion
+            </button>
 </form>
 {% endblock %}

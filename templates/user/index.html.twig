@@ -3,6 +3,13 @@
 {% block title %}Profil{% endblock %}
 
 {% block body %}
-<h1>Bonjour {{ user.fisrtName }}</h1>
-    Vos informations, vos parties...
+<h1>Bonjour {{ user.pseudo }}</h1>
+  <br>
+    <h2> Trouver une partie</h2>
+   <p> <a style="color: black" href="{{ path('new_game') }}">Nouveau jeu</a> </p>
+
+    <h2>Vos statistiques</h2>
+    <p> Vous avez joué : 0 parties</p>
+    <p> Parties gagnées : 0</p>
+    <p> Parties perdues : 0</p>
 {% endblock %}

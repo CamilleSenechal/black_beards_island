@@ -1,61 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
-    <div class="row">
-        <div class="col-8">
-            Cartes de l'adversaire
-            {% for card in set.user2HandCards %}
-                {# <img src="{{ asset('cartes/'~cards[card].picture) }}"> #}
-                <span style="border: 1px solid black; margin:3px; padding:5px">
-                {{ cards[card].number }}
-            </span>
-            {% endfor %}
-        </div>
-        <div class="col-4">
-            Actions
-        </div>
-    </div>
-    <div class="row">
-        Plateau adversaire
-    </div>
-    <div class="row">
-        {% for i in 1..7 %}
-            <div class="col-1">
-                <span style="border: 1px solid black; margin:3px; padding:5px">
-                    {{ i }}
-                </span>
-            </div>
-        {% endfor %}
-
-    </div>
-    <div class="row">
-        Mon Plateau
-    </div>
-    <div class="row">
-        <div class="col-8">
-            {% for card in set.user1HandCards %}
-                {# <img src="{{ asset('cartes/'~cards[card].picture) }}"> #}
-                <span style="border: 1px solid black; margin:3px; padding:5px">
-                {{ cards[card].number }}
-                    <input type="radio" name="carte_secret" value="{{ card }}"
-                           style="display: none"
-                           class="choixSecret">
-                </span>
-            {% endfor %}
-        </div>
-        <div class="col-4">
-            Mes Actions
-            <button id="secret">Secret</button>
-            <button  id="depot">Depot</button>
-            <button  id="offre">Offre</button>
-            <button  id="echange">Echange</button><br>
-            <button id="valider" style="display: none">Valider action</button>
-        </div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <div id="plateau">
+        {{ render(controller('App\\Controller\\GameController::refreshPlateauGame', {game:game.id})) }}
     </div>
 
-
-
+    <div id="message">...</div>
 {% endblock %}
 
 {% block title %}
@@ -64,6 +15,45 @@
 
 {% block javascripts %}
     <script>
+        let boucle
+        $(document).ready(function(){
+            boucle = setInterval(refreshGame, 3000);
+        })
+        $(document).on('click', '#finDeTour', function() {
+            var event = 'clicked';
+            console.log(event);
+            $.ajax({
+                url: "{{ path('change_tour', {game: game.id}) }}",
+                data: 'event=' + event ,
+                method: 'POST',
+                success: function(data){
+                    if(data == true){
+                        $('.action button').attr('disabled', 'disabled');
+                        boucle = setInterval(refreshGame, 3000);
+                    }
+                },
+                error: function (){
+                    console.log('Il y a un problème')
+                }
+            })
+        })
+        function refreshGame() {
+            $.ajax({
+                url: "{{ path('get_tour', {game: game.id}) }}",
+                success: function(data) {
+                    console.log(data)
+                    if (data == false) {
+                        $('#message').html('Tour de votre adversaire')
+                    } else {
+                        $('#message').html('C\'est mon tour...')
+                        //mettre à jour le plateau, dès que je récupère true
+                        clearInterval(boucle)
+                    }
+                },
+                error: function(){
+                }
+            })
+        }
         let action
         $(document).on('click', '#secret', function(){
             console.log('secret')
@@ -90,7 +80,10 @@
                 url: "{{ path('action_game', {game: game.id}) }}",
                 data: donneesAction,
                 method: 'POST',
-                success: function() {
+                success: function(data) {
+                    if (data == true) {
+                        $('#plateau').load("{{ path('refresh_plateau_game', {game:game.id}) }}")
+                    }
                 },
                 error: function(){
                 }

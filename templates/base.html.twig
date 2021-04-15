@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        {% endblock %}
+    {% block stylesheets %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-    <header>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-            <div class="container">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <strong>Jeu</strong>
-                </a>
-                <span class="text-white">
-                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    Bonjour {{ app.user.fisrtName }}. <a href="{{ path('app_logout') }}">Me déconnecter</a>
-                {% else %}
-                    <a href="{{ path('app_login') }}">Me connecter</a>
-                {% endif %}
-                    </span>
-            </div>
+        <link href="{{ asset('assets/style.css') }}" rel="stylesheet">
+
+    {% endblock %}
+
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+
+    {% block javascripts %}
+        {# {{ encore_entry_script_tags('app') }} #}
+    {% endblock %}
+
+
+</head>
+<body id="home">
+<header>
+
+    <div id="headerbar">
+        <div id="headerbar-ctnr" class="ctnr">
+            <a id="logo-link" href="{{ path('default') }}">
+                <img id="sitelogo" src="{{ asset('assets/image/logo.png')}}">
+            </a>
+            <nav>
+                <ul>
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <li><a>Bonjour {{ app.user.pseudo }}</a></li> <li><a href="{{ path('app_logout') }}">Me déconnecter</a> <li>
+                        {% else %}
+                        <li><a href="{{ path('app_login') }}">Connexion</a></li>
+                        <li><a href="{{ path('inscription') }}">Inscription</a></li>
+
+                        {% endif %}
+
+                    <li><a href="https://mmi19a06.mmi-troyes.fr/promo/" class="button" id="acheter">Acheter</a></li>
+                </ul>
+            </nav>
         </div>
-    </header>
-    <main class="container">
-        {% block body %}{% endblock %}
-    </main>
-    </body>
+
+    </div>
+
+
+
+
+</header>
+<div class="plug"></div>
+<main class="container">
+    {% block body %}{% endblock %}
+</main>
+</body>
 </html>

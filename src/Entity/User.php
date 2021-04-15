@@ -6,11 +6,13 @@ use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\Table(name="`user`")
+ * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  */
 class User implements UserInterface
 {
@@ -40,17 +42,8 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=30)
      */
-    private $firstname;
+    private $pseudo;
 
-    /**
-     * @ORM\Column(type="string", length=30)
-     */
-    private $lastname;
-
-    /**
-     * @ORM\Column(type="date")
-     */
-    private $birthday;
 
     /**
      * @ORM\OneToMany(targetEntity=Game::class, mappedBy="user1")
@@ -67,12 +60,6 @@ class User implements UserInterface
      */
     private $winners;
 
-    public function __construct()
-    {
-        $this->games1 = new ArrayCollection();
-        $this->games2 = new ArrayCollection();
-        $this->winners = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -106,7 +93,7 @@ class User implements UserInterface
      */
     public function getRoles(): array
     {
-        $roles = [$this->roles];
+        $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
         $roles[] = 'ROLE_JOUEUR';
 
@@ -155,41 +142,19 @@ class User implements UserInterface
         // $this->plainPassword = null;
     }
 
-    public function getFisrtName(): ?string
+    public function getPseudo(): ?string
     {
-        return $this->firstname;
+        return $this->pseudo;
     }
 
-    public function setFirstNale(string $firstname): self
+    public function setPseudo(string $pseudo): self
     {
-        $this->firstname = $firstname;
+        $this->pseudo = $pseudo;
 
         return $this;
     }
 
-    public function getLastName(): ?string
-    {
-        return $this->lastname;
-    }
 
-    public function setLastName(string $lastname): self
-    {
-        $this->lastname = $lastname;
-
-        return $this;
-    }
-
-    public function getBirthday(): ?\DateTimeInterface
-    {
-        return $this->birthday;
-    }
-
-    public function setBirthday(\DateTimeInterface $birthday): self
-    {
-        $this->birthday = $birthday;
-
-        return $this;
-    }
 
     /**
      * @return Collection|Game[]
@@ -283,6 +248,7 @@ class User implements UserInterface
 
     public function display()
     {
-        return $this->firstname.' '.$this->lastname;
+        return $this->pseudo;
     }
+
 }

@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+
+{% block body %}
+<style>
+    .separateur {
+        width: 80px;
+        height: 2px;
+        background-color: #2aae81;
+        margin-bottom: 25px;
+    }
+    #section_accueil .ctnr {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 80px;
+    }
+
+    #form_inscription {
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        padding: 14px 15px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #313131;
+        letter-spacing: 0.08em;
+        transition-duration: 400ms;
+        margin-top: 20px;
+    }
+{#    {{ form(form) }}#}
+</style>
+
+<section id="section_accueil">
+    <div class="ctnr">
+        <h1>Inscription</h1>
+
+        {{ form_start(form) }}
+        <div>
+            {{ form_errors(form) }}
+        </div>
+
+        <div>
+            <div class="user-box">
+                {{ form_widget(form.pseudo) }}
+                {{ form_label(form.pseudo, 'Pseudo') }}
+            </div>
+            <div class="user-box">
+                {{ form_widget(form.email) }}
+                {{ form_label(form.email, 'Email') }}
+            </div>
+            <div class="user-box">
+                {{ form_widget(form.password.first) }}
+                {{ form_label(form.password.first, 'Mot de passe') }}
+            </div>
+            <div class="user-box">
+                {{ form_widget(form.password.second) }}
+                {{ form_label(form.password.second, 'Confirmez le mot de passe') }}
+            </div>
+
+                {{ form_row(form.inscription) }}
+
+
+        </div>
+
+
+        {{ form_end(form) }}
+
+    </div>
+</section>
+{% endblock %}

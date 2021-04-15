@@ -1,20 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DefaultController!{% endblock %}
+
+
+{% block title %}Black Beard's island {% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <style>
+        .separateur {
+            width: 80px;
+            height: 2px;
+            background-color: #2aae81;
+            margin-bottom: 25px;
+        }
+         #section_accueil .ctnr {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    </style>
+<section id="section_accueil">
+    <div class="ctnr">
+        <h2 style="color: #313131; margin-top: 50px">Testez notre jeu !</h2>
+        <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/B8aorkubmLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h2 style="color: #313131; margin-top: 50px">Qu'est-ce que c'est ?</h2>
+        <div class="separateur"></div>
+        <div><p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin facilisis nisi sapien, in tincidunt dui tempor sit amet. Sed eu nunc posuere, porttitor nisl eu, lobortis odio. Sed ut ante eu lectus auctor iaculis sed a mi. Vestibulum a lacus magna. Vestibulum egestas ipsum eu leo semper varius. Donec dolor felis, commodo non mollis vitae, vestibulum ac quam. Nullam faucibus ultrices vehicula. Sed viverra at justo in auctor. Vivamus iaculis sagittis sapien. Donec in faucibus est, eu semper orci. Pellentesque finibus vel purus a accumsan. Cras nec ligula id massa hendrerit dignissim malesuada sed massa. Etiam feugiat convallis arcu a lobortis.
+                <br>
+                Donec cursus consequat viverra. Aenean pharetra bibendum vehicula. Nunc suscipit ante eget ex porttitor laoreet. Nullam in rutrum odio, ut iaculis justo. Ut tortor nisi, dapibus posuere mi non, molestie dictum urna. Suspendisse potenti. Proin volutpat risus ac lobortis scelerisque. Duis quis maximus urna, sed rhoncus odio.
+            </p>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/davidannebicque/htdocs/jeuS4/src/Controller/DefaultController.php'|file_link(0) }}">src/Controller/DefaultController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/davidannebicque/htdocs/jeuS4/templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a></code></li>
-    </ul>
-</div>
+</section>
 {% endblock %}
