@@ -236,14 +236,17 @@ class GameController extends AbstractController
         Request $request, Game $game
     ):Response{
         $event = $request->request->get('event');
+        dump($event);
         $joueur1 = 1;
         $joueur2 = 2;
         if ($event == 'clicked'){
             if ($game->getQuiJoue() == $joueur1){
                 $game->setQuiJoue($joueur2);
+                dump('michel1');
             }
-            if ($game->getQuiJoue() == $joueur2){
+            elseif ($game->getQuiJoue() == $joueur2){
                 $game->setQuiJoue($joueur1);
+                dump('michel2');
             }
         }
         $entityManager->flush();

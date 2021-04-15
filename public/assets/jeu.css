@@ -59,5 +59,151 @@ body #jeu-profil .ctnr #profil-grid #grid-image {
 body #jeu-profil .ctnr #profil-grid #grid-image #profil-carte-dos {
   height: 200px;
 }
+body #jeu-plateau {
+  width: 100%;
+  height: calc(100vh - 86px);
+  padding: 40px 40px 20px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("image/plateau-bg.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+body #jeu-plateau .jeu-plateau-section {
+  width: 100%;
+  height: calc((100vh - 166px) / 3);
+  box-sizing: border-box;
+}
+body #jeu-plateau .jeu-plateau-section .jeu-main {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  padding-right: 60px;
+}
+body #jeu-plateau .jeu-plateau-section .jeu-main .jeu-carte {
+  height: 20vh;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-top #jeu-info {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: calc((100vh - 166px) / 3);
+  padding-left: 60px;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-top #jeu-info .jeu-info-txt {
+  background-color: #262025;
+  border: 1px solid #fcc447;
+  padding: 30px;
+  color: white;
+  font-family: "Della Respira", serif;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  box-shadow: 10px 10px 23px 0 rgba(0, 0, 0, 0.75);
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-top #jeu-main-adv {
+  align-items: flex-start;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-middle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-middle .jeu-personnage {
+  height: 95%;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-main-joueur {
+  height: calc((100vh - 166px) / 3);
+  align-items: flex-end;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-main-joueur .jeu-carte {
+  transition-duration: 300ms;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-main-joueur .jeu-carte:hover {
+  transform: translateY(-5%) scale(1.05);
+  cursor: pointer;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-boutons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-boutons button {
+  margin-top: 20px;
+  font-size: 14px;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-boutons a#jeu-bouton-valider {
+  background-color: #2aae81;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-boutons a#jeu-bouton-valider:hover {
+  background-color: #fcc447;
+  color: #313131;
+  box-shadow: 0 0 19px rgba(247, 202, 24, 0.69), 0 0 8px rgba(247, 202, 24, 0.62), 0 0 8px rgba(247, 202, 24, 0.62);
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-boutons button#jeu-bouton-fin {
+  border: 1px solid #fcc447;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-boutons button.button {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding: 14px 15px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #313131;
+  letter-spacing: 0.08em;
+  transition-duration: 400ms;
+  border-radius: 9px 0 9px 0;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-boutons button.button:hover {
+  background-color: #2aae81;
+  border-radius: 0 9px 0 9px;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-boutons button#jeu-bouton-fin:hover {
+  border: 1px solid #2aae81;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-actions-joueur {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  margin-left: 20px;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-actions-joueur .jeu-action-lien {
+  transition-duration: 300ms;
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-actions-joueur .jeu-action-lien:hover {
+  transform: translateY(-5%) scale(1.05);
+}
+body #jeu-plateau .jeu-plateau-section#jeu-plateau-bottom #jeu-commandes #jeu-actions-joueur .jeu-action-lien .jeu-action {
+  height: 11vh;
+  box-shadow: 10px 10px 23px 0 rgba(0, 0, 0, 0.5);
+}
 
 /*# sourceMappingURL=jeu.css.map */

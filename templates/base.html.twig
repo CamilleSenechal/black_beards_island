@@ -33,7 +33,7 @@
             <nav>
                 <ul>
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <li><a>Bonjour {{ app.user.pseudo }}</a></li> <li><a href="{{ path('app_logout') }}">Me déconnecter</a> <li>
+                    <li><a href="{{ path('user_profil')}}" > Bonjour {{ app.user.pseudo }}</a></li> <li><a href="{{ path('app_logout') }}">Me déconnecter</a> <li>
                         {% else %}
                         <li><a href="{{ path('app_login') }}">Connexion</a></li>
                         <li><a href="{{ path('inscription') }}">Inscription</a></li>

@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <div id="plateau">
-        {{ render(controller('App\\Controller\\GameController::refreshPlateauGame', {game:game.id})) }}
-    </div>
 
-    <div id="message">...</div>
+    <section id="plateau-jeu">
+        {{ render(controller('App\\Controller\\GameController::refreshPlateauGame', {game:game.id})) }}
+    </section>
+
+
 {% endblock %}
 
 {% block title %}
@@ -19,7 +19,7 @@
         $(document).ready(function(){
             boucle = setInterval(refreshGame, 3000);
         })
-        $(document).on('click', '#finDeTour', function() {
+        $(document).on('click', '#jeu-bouton-fin', function() {
             var event = 'clicked';
             console.log(event);
             $.ajax({
@@ -28,7 +28,7 @@
                 method: 'POST',
                 success: function(data){
                     if(data == true){
-                        $('.action button').attr('disabled', 'disabled');
+                        $('.jeu-action-lien a').attr('disabled', 'disabled');
                         boucle = setInterval(refreshGame, 3000);
                     }
                 },
@@ -43,9 +43,9 @@
                 success: function(data) {
                     console.log(data)
                     if (data == false) {
-                        $('#message').html('Tour de votre adversaire')
+                        $('.jeu-info-txt').html('Tour de votre adversaire')
                     } else {
-                        $('#message').html('C\'est mon tour...')
+                        $('.jeu-info-txt').html('C\'est mon tour...')
                         //mettre à jour le plateau, dès que je récupère true
                         clearInterval(boucle)
                     }
@@ -59,9 +59,9 @@
             console.log('secret')
             action = 'secret' //mémorise l'action en cours
             $('.choixSecret').show()
-            $('#valider').show()
+            $('#jeu-bouton-valider').show()
         })
-        $(document).on('click', '#valider', function(){
+        $(document).on('click', '#jeu-bouton-valider', function(){
             switch (action) {
                 case 'secret':
                     donneesAction = {
@@ -82,7 +82,8 @@
                 method: 'POST',
                 success: function(data) {
                     if (data == true) {
-                        $('#plateau').load("{{ path('refresh_plateau_game', {game:game.id}) }}")
+                        $('#plateau-jeu').load("{{ path('refresh_plateau_game', {game:game.id}) }}")
+                        boucle = setInterval(refreshGame, 3000);
                     }
                 },
                 error: function(){
