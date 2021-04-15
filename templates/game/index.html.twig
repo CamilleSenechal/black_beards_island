@@ -3,22 +3,61 @@
 {% block title %}Blackbeard's island{% endblock %}
 
 {% block body %}
-<form action="{{ path('create_game') }}" method="post">
-    <div>
-        Moi
+    <style>
+        .separateur {
+            width: 80px;
+            height: 2px;
+            background-color: #2aae81;
+            margin-bottom: 25px;
+        }
+        #section_accueil .ctnr {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .button {
+            font-family: "Poppins", sans-serif;
+            text-transform: uppercase;
+            padding: 14px 15px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #313131;
+            letter-spacing: 0.08em;
+            transition-duration: 400ms;
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+    </style>
+    <section id="section_accueil">
+        <div class="ctnr">
+            <h1>Qui allez-vous affronter ?</h1>
+
+
+            <form action="{{ path('create_game') }}" method="post">
+
+
+            <div class="user-select">
+                <label for="user2">Adversaire :</label>
+                <select name="user2" id="user2">
+                    <option value="">Choisir votre adversaire</option>
+                    {% for user in users|filter(user => user.id != app.user.id) %}
+                        <option value="{{ user.id }}">{{ user.display }}</option>
+                    {% endfor %}
+                </select>
+
+                <button class="button" type="submit">Commencer la partie</button>
+            </div>
+
+
+
+    </form>
+
     </div>
+    </section>
 
-    <div>
-        <label for="user2">Contre :</label>
-        <select name="user2" id="user2">
-            <option value="">Choisir le joueur 2</option>
-            {% for user in users|filter(user => user.id != app.user.id) %}
-                <option value="{{ user.id }}">{{ user.display }}</option>
-            {% endfor %}
-        </select>
-    </div>
-
-    <button type="submit">Commencer la partie</button>
-
-</form>
 {% endblock %}

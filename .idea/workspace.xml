@@ -20,33 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3139c0ae-26ee-49b4-87a8-1891a31acf8e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210331085613.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/InscriptionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/game/plateau_game.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/inscription/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jeuS4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jeuS4.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/game/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/game/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/game/show_game.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/game/show_game.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +176,7 @@
       <workItem from="1618334260069" duration="446000" />
       <workItem from="1618412734095" duration="15000" />
       <workItem from="1618423669326" duration="9084000" />
-      <workItem from="1618493067423" duration="12102000" />
+      <workItem from="1618493067423" duration="15431000" />
     </task>
     <servers />
   </component>

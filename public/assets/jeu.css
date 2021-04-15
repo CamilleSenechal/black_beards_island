@@ -1,0 +1,63 @@
+body #jeu-profil {
+  width: 100%;
+  min-height: calc(100vh - 86px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("image/ile.jpg");
+  background-size: cover;
+  background-position: center;
+}
+body #jeu-profil .ctnr {
+  min-height: calc(100vh - 86px);
+  width: 800px !important;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 75px;
+  background-color: #fff;
+}
+body #jeu-profil .ctnr #profil-entete {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
+}
+body #jeu-profil .ctnr #profil-entete h3 {
+  margin-bottom: 15px;
+}
+body #jeu-profil .ctnr #profil-entete .separateur {
+  width: 80px;
+  height: 2px;
+  background-color: #2aae81;
+  margin-bottom: 15px;
+}
+body #jeu-profil .ctnr #profil-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  grid-gap: 50px;
+}
+body #jeu-profil .ctnr #profil-grid h4 {
+  color: #313131;
+  margin-bottom: 2em;
+}
+body #jeu-profil .ctnr #profil-grid ul {
+  list-style-type: none;
+}
+body #jeu-profil .ctnr #profil-grid a {
+  color: #2aae81;
+}
+body #jeu-profil .ctnr #profil-grid a:hover {
+  text-decoration: underline;
+}
+body #jeu-profil .ctnr #profil-grid #grid-image {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body #jeu-profil .ctnr #profil-grid #grid-image #profil-carte-dos {
+  height: 200px;
+}
+
+/*# sourceMappingURL=jeu.css.map */

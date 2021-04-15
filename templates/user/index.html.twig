@@ -1,15 +1,50 @@
 {% extends 'base.html.twig' %}
 
+
 {% block title %}Profil{% endblock %}
 
 {% block body %}
-<h1>Bonjour {{ user.pseudo }}</h1>
-  <br>
-    <h2> Trouver une partie</h2>
-   <p> <a style="color: black" href="{{ path('new_game') }}">Nouveau jeu</a> </p>
+{#<h1>Bonjour {{ user.pseudo }}</h1>#}
+{#  <br>#}
+{#    <h2> Trouver une partie</h2>#}
+{#   <p> <a style="color: black" href="{{ path('new_game') }}">Nouveau jeu</a> </p>#}
 
-    <h2>Vos statistiques</h2>
-    <p> Vous avez joué : 0 parties</p>
-    <p> Parties gagnées : 0</p>
-    <p> Parties perdues : 0</p>
+{#    <h2>Vos statistiques</h2>#}
+{#    <p> Vous avez joué : 0 parties</p>#}
+{#    <p> Parties gagnées : 0</p>#}
+{#    <p> Parties perdues : 0</p>#}
+
+
+
+    <section id="jeu-profil">
+        <div class="ctnr">
+            <div id="profil-entete">
+                <h3>Profil</h3>
+                <div class="separateur"></div>
+                <p>Ohé, {{ user.pseudo }} !</p>
+            </div>
+            <div id="profil-grid">
+                <div class="profil-section">
+                    <h4>Parties</h4>
+                    <ul>
+                        <li><a href="">Rejoindre une partie</a></li>
+                        <li><a href="{{ path('new_game') }}">Nouvelle partie</a></li>
+                    </ul>
+                </div>
+                <div id="grid-image">
+                    <img src="{{ asset('assets/image/carte-dos.png')}}" alt="" id="profil-carte-dos">
+                </div>
+                <div class="profil-section">
+                    <h4>Éditer mon profil</h4>
+                    <a href="">Modifier mon mot de passe</a>
+                </div>
+                <div class="profil-section">
+                    <h4>Statistiques</h4>
+                    <p>Nombre de parties jouées : 0</p>
+                    <p>Nombre de parties remportées : 0</p>
+                    <p>Nombre de parties perdues : 0</p>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
