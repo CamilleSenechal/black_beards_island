@@ -83,7 +83,7 @@
                 success: function(data) {
                     if (data == true) {
                         $('#plateau-jeu').load("{{ path('refresh_plateau_game', {game:game.id}) }}")
-                        clearInterval(boucle)
+                        boucle = setInterval(refreshGame, 3000);
                     }
                 },
                 error: function(){
