@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Game;
 use App\Entity\Round;
+use App\Entity\User;
 use App\Repository\CardRepository;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -29,6 +30,7 @@ class GameController extends AbstractController
             'users' => $users
         ]);
     }
+
 
     /**
      * @Route("/create-game", name="create_game")
